@@ -6,9 +6,14 @@ export const data = reactive({
             data.arrayNumbers.push(n);
             console.log(data.arrayNumbers);
         },
+        atArray(n) {
+           data.numberAt = data.arrayNumbers.at(n);
+           
+        }
 
     },
-    numberUser: "8",
+    numberUser: "10",
+    numberAt: "",
 
 })
 /*  pushArray(array) {

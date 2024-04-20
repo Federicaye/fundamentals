@@ -1,7 +1,9 @@
 <template>
-    <div class="numbers">
-        <div v-for="(number, index) in data.arrayNumbers" :key="index" class="number">
-            <p>{{ number }}</p>
+    <div class="display">
+        <div class="numbers">
+            <div v-for="(number, index) in data.arrayNumbers" :key="index" class="number">
+                <p>{{ number }}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -19,6 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* .display{
+    position: fixed;
+} */
 .numbers {
     display: flex;
 }
