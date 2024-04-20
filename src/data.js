@@ -21,11 +21,14 @@ export const data = reactive({
             data.arrayNumbers.fill(x, y, z);
             console.log(data.arrayNumbers);
         },
+        /* filterArray(){
+            data.arrayNumbers2 = data.arrayNumbers.filter((n) =>  n < 4);
+        }, */
         filterArray(){
-            data.arrayNumbers2 = data.arrayNumbers.filter((n) => n < 3);
-        },
+            data.arrayNumbers2 = data.arrayNumbers.filter(this.greaterThan);
+        }, 
         greaterThan(n) {
-            return n >= 4;
+            return n >= +data.variabileF;
           }
         
         

@@ -35,8 +35,8 @@
             v-model="data.variabileE" class="input-green"></span>
       </div>
       <div>
-        <button @click="data.actions.filterArray(n)" class="button-blue">filter</button>
-        <span>filtra i numeri minori di 3</span>
+        <button @click="data.actions.filterArray(n)" class="button-green">filter</button>
+        <span>filtra i numeri maggiori uguali di <input type="number" v-model="data.variabileF" class="input-green"></span>
       </div>
     </div>
   </div>
