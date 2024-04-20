@@ -1,0 +1,34 @@
+<template>
+    <div class="numbers">
+        <div v-for="(number, index) in data.arrayNumbers" :key="index" class="number">
+            <p>{{ number }}</p>
+        </div>
+    </div>
+</template>
+
+<script>
+import { data } from "../data.js";
+export default {
+    name: 'ArraysComponent',
+    data() {
+        return {
+            data,
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.numbers {
+    display: flex;
+}
+
+.number {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    line-height: 50px;
+    text-align: center;
+}
+</style>
