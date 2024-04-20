@@ -7,12 +7,14 @@ export const data = reactive({
             console.log(data.arrayNumbers);
         },
         atArray(n) {
-           data.numberAt = data.arrayNumbers.at(n);
-           
+           data.numberAt = data.arrayNumbers.at(n);         
         },
         copyWithinArray(x, y) {
             data.arrayNumbers.copyWithin(x, y);
-            console.log(data.arrayNumbers.copyWithin(x,y));
+        },
+        entriesArray() {
+           data.arrayIterator = data.arrayNumbers.entries();
+           console.log(data.arrayIterator);
         }
         
         
@@ -20,6 +22,7 @@ export const data = reactive({
     },
     numberUser: "10",
     numberAt: "",
+    arrayIterator: []
 
 })
 /*  pushArray(array) {
