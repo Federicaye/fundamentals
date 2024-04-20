@@ -15,6 +15,10 @@ export const data = reactive({
         entriesArray() {
            data.arrayIterator = data.arrayNumbers.entries();
            console.log(data.arrayIterator);
+        },
+        fillArray(x, y, z) {
+            data.arrayNumbers.fill(x, y, z);
+            console.log(arrayNumbers);
         }
         
         
@@ -22,7 +26,12 @@ export const data = reactive({
     },
     numberUser: "10",
     numberAt: "",
-    arrayIterator: []
+    arrayIterator: [],
+    variabileA: "",
+    variabileB: "",
+    variabileC: "",
+    variabileD: "",
+    variabileE: "",
 
 })
 /*  pushArray(array) {
