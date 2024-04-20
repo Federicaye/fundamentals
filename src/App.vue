@@ -1,8 +1,11 @@
 <template>
   <div>
     <h1>Methods</h1>
-    <ArraysComponent />
-    
+    <div class="arrays">
+      <ArraysComponent :array="data.arrayNumbers" />
+      <ArraysComponent :array="data.arrayNumbers2" />
+    </div>
+
     <div class="container">
       <div class="insertNumber"><input type="number" v-model="data.numberUser" class="input-blue"></div>
       <div>
@@ -13,18 +16,27 @@
         <button @click="data.actions.atArray(data.numberUser)" class="button-blue">at</button>
         <span>ritorna l'elemento dell'array con quell'indice: {{ data.numberAt }}</span>
       </div>
-       <div>
-        <button @click="data.actions.copyWithinArray(data.variabileA, data.variabileB)" class="button-green">copyWithin</button>
-        <span>  Copy to index <input type="number" v-model="data.variabileA" class="input-green"> all elements from index <input type="number" v-model="data.variabileB" class="input-green"> to the end</span>
-      </div> 
+      <div>
+        <button @click="data.actions.copyWithinArray(data.variabileA, data.variabileB)"
+          class="button-green">copyWithin</button>
+        <span> Copy to index <input type="number" v-model="data.variabileA" class="input-green"> all elements from index
+          <input type="number" v-model="data.variabileB" class="input-green"> to the end</span>
+      </div>
       <div>
         <button @click="data.actions.entriesArray()" class="button-orange">entries</button>
         <span>returns an Array Iterator object with key/value pairs: </span>
         <span v-for="(array, index) in data.arrayIterator"> {{ array }}</span>
       </div>
       <div>
-        <button @click="data.actions.fillArray(data.variabileC, data.variabileD, data.variabileE)" class="button-green">fill</button>
-        <span>  Fill with <input type="number" v-model="data.variabileC" class="input-green"> from position <input type="number" v-model="data.variabileD" class="input-green">  until position <input type="number" v-model="data.variabileE"></span>
+        <button @click="data.actions.fillArray(data.variabileC, data.variabileD, data.variabileE)"
+          class="button-green">fill</button>
+        <span> Fill with <input type="number" v-model="data.variabileC" class="input-green"> from position <input
+            type="number" v-model="data.variabileD" class="input-green"> until position <input type="number"
+            v-model="data.variabileE" class="input-green"></span>
+      </div>
+      <div>
+        <button @click="data.actions.filterArray(n)" class="button-blue">filter</button>
+        <span>filtra i numeri minori di 3</span>
       </div>
     </div>
   </div>
@@ -90,5 +102,10 @@ h1 {
   background-color: rgb(80, 148, 71);
   border-radius: 10px;
   margin-right: 10px;
+}
+
+.arrays {
+  display: flex;
+  justify-content: space-around;
 }
 </style>

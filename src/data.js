@@ -1,6 +1,7 @@
 import { reactive } from 'vue';
 export const data = reactive({
     arrayNumbers: [1, 2, 3, 4, 5, 6],
+    arrayNumbers2: [8,7,6,5,4,3],
     actions: {
         pushArray(n) {
             data.arrayNumbers.push(n);
@@ -18,8 +19,14 @@ export const data = reactive({
         },
         fillArray(x, y, z) {
             data.arrayNumbers.fill(x, y, z);
-            console.log(arrayNumbers);
-        }
+            console.log(data.arrayNumbers);
+        },
+        filterArray(){
+            data.arrayNumbers2 = data.arrayNumbers.filter((n) => n < 3);
+        },
+        greaterThan(n) {
+            return n >= 4;
+          }
         
         
 
@@ -32,6 +39,7 @@ export const data = reactive({
     variabileC: "",
     variabileD: "",
     variabileE: "",
+    variabileF: "",
 
 })
 /*  pushArray(array) {

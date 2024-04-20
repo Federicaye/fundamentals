@@ -1,7 +1,7 @@
 <template>
     <div class="display">
         <div class="numbers">
-            <div v-for="(number, index) in data.arrayNumbers" :key="index" class="number">
+            <div v-for="(number, index) in array" :key="index" class="number">
                 <p>{{ number }}</p>
             </div>
         </div>
@@ -16,7 +16,8 @@ export default {
         return {
             data,
         }
-    }
+    },
+    props: ['array'],
 }
 </script>
 
