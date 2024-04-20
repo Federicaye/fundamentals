@@ -2,11 +2,12 @@ import { reactive } from 'vue';
 export const data = reactive({
     arrayNumbers: [1, 2, 3, 4, 5, 6],
     arrayNumbers2: [8,7,6,5,4,3],
+    
     actions: {
         pushArray(n) {
             data.arrayNumbers.push(n);
             console.log(data.arrayNumbers);
-        },
+        }, 
         atArray(n) {
            data.numberAt = data.arrayNumbers.at(n);         
         },

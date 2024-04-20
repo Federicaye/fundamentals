@@ -22,15 +22,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* .display{
-    position: fixed;
-} */
+
 .numbers {
     display: flex;
+    flex-wrap: wrap;
+
 }
 
 .number {
-    margin: 10px;
+   margin: 7px;
     width: 50px;
     height: 50px;
     border: 2px solid black;
