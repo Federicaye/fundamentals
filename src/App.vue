@@ -12,6 +12,10 @@
         <button @click="data.actions.atArray(data.numberUser)">at</button>
         <span>ritorna l'elemento dell'array con quell'indice: {{ data.numberAt }}</span>
       </div>
+       <div>
+        <button @click="data.actions.copyWithinArray(data.x, data.y)">copyWithin</button>
+        <span>  Copy to index <input type="number" v-model="data.x"> all elements from index <input type="number" v-model="data.y"> to the end</span>
+      </div> 
     </div>
   </div>
   <ButtonComponent @click="data.actions.pushArray(data.numberUser)" />

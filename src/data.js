@@ -9,7 +9,13 @@ export const data = reactive({
         atArray(n) {
            data.numberAt = data.arrayNumbers.at(n);
            
+        },
+        copyWithinArray(x, y) {
+            data.arrayNumbers.copyWithin(x, y);
+            console.log(data.arrayNumbers.copyWithin(x,y));
         }
+        
+        
 
     },
     numberUser: "10",
