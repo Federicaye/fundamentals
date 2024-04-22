@@ -28,15 +28,26 @@ export const data = reactive({
         filterArray() {
             data.arrayNumbers2 = data.arrayNumbers.filter(this.greaterThan);
         },
-        greaterThan(n) {
+        isGreaterThan(n) {
             return n >= +data.variabileF;
         },
-        findIndexArray(){
-           data.indexOf = data.arrayNumbers.findIndex(this.greaterThan);
-           if (data.indexOf === "-1"){
-            data.indexOf ="nessun valore soddisfa il criterio di ricerca"
-           };
+        findIndexArray() {
+            data.indexOf = data.arrayNumbers.findIndex(this.isGreaterThan);
+            if (data.indexOf === "-1") {
+                data.indexOf = "nessun valore soddisfa il criterio di ricerca"
+            };
         },
+        findArray() {
+            data.findElement = data.arrayNumbers.find(this.isGreaterThan);
+            console.log(data.findElement)
+            if (data.findElement === undefined) {
+                data.findElement = "nessun valore soddisfa il criterio di ricerca"
+            };
+        },
+        isEven(n){
+          data.evenNumber = data.arrayNumbers.find((n)=> n % 2 == 0)
+        }
+       
     },
     numberUser: "10",
     numberAt: "",
@@ -48,6 +59,8 @@ export const data = reactive({
     variabileE: "",
     variabileF: "",
     indexOf: "",
+    findElement: "",
+    evenNumber: ""
 
 })
 /*  pushArray(array) {
